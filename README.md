@@ -4,7 +4,7 @@ This is the coding exercise we give to all potential front-end team members. It 
 
 ## Exercise 1
 
-We've created a CodePen with a small exercise. Please follow the link below, fork the CodePen and complete the exercise as per the instructions.
+We've created a CodePen with a small exercise. Please follow the link below, fork the CodePen and complete the exercise. The instructions are in the code at this link:
 
 http://codepen.io/isinn/pen/ZWVmvw
 
@@ -50,7 +50,7 @@ The goals of this exercise are as follows:
 * Style the app to look similar to the demo video
 * Add loading states for all the async actions a user can perform (fetching reports, creating a report, deleting a report, etc)
 
-All of the bullet points above are optional. Don't feel obligated to complete anything that's taking up an inordinate amount of time. This exercise is not meant to consume your weekend, but do complete as much as you can.
+All of the bullet points above are **_optional_**. Don't feel obligated to complete anything that's taking up too much time. This exercise is not meant to consume your weekend, but do complete as much as you can.
 
 ## Wrapping Up
 
@@ -64,3 +64,7 @@ Please respond to the initial email thread with links to your solutions to Exerc
   Please [open an issue][] and we'll be happy to address it.
 
 [open an issue]: https://github.com/trustar/front-end-coding-excercise/issues/new
+
+## Questions
+
+Please [open an issue][] or email us at the same email we contacted you with.
