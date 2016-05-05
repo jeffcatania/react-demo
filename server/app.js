@@ -2,6 +2,7 @@ const http = require('http');
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 
@@ -9,6 +10,7 @@ app.set('port', process.env.PORT || 3000);
 app.use(express.static('public', { index: false }));
 app.use(morgan(process.env.NODE_ENV === 'development' ? 'dev' : 'combined'));
 app.use(bodyParser.json());
+app.use(cors());
 
 /* **************************************************************************
  * API
