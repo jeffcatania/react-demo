@@ -8,7 +8,7 @@ const db = require('./datastore.js');
 
 const app = express();
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3333);
 app.use(express.static('public', { index: false }));
 app.use(morgan(process.env.NODE_ENV === 'development' ? 'dev' : 'combined'));
 app.use(bodyParser.json());
