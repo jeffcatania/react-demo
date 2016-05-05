@@ -2,8 +2,26 @@ const merge = require('lodash/merge');
 const cloneDeep = require('lodash/cloneDeep');
 const values = require('lodash/values');
 const uuid = require('node-uuid').v4;
+const faker = require('faker');
 
 const data = Object.create(null);
+
+const fixtures = []
+
+for (let i = 0; i < 100; i++) {
+  let past = faker.date.past();
+  fixtures.push({
+    id: uuid(),
+    created: past,
+    updated: past,
+    title: faker.lorem.sentence(),
+    body: faker.lorem.paragraphs(),
+  });
+}
+
+// Add fixtures so that there is some data in the datastore when the server
+// first spins up
+merge(data, fixtures);
 
 /**
  * @module DataStore
@@ -44,8 +62,8 @@ module.exports = {
     const id = uuid();
     const result = Object.assign(Object.create(null), v, {
       id,
-      created: Date.now(),
-      updated: Date.now(),
+      created: new Date(),
+      updated: new Date(),
     });
     data[id] = result;
     return cloneDeep(result);
@@ -59,7 +77,7 @@ module.exports = {
    */
   update(id, v) {
     merge(data[id], v, {  // NOTE: _.merge mutates values
-      updated: Date.now(),
+      updated: new Date(),
     });
     return cloneDeep(data[id]);
   },
