@@ -4,6 +4,8 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
+const db = require('./datastore.js');
+
 const app = express();
 
 app.set('port', process.env.PORT || 3000);
@@ -17,23 +19,23 @@ app.use(cors());
  * *************************************************************************/
 
 app.get('/reports', (req, res) => {
-  res.send('GET Get all reports');
+  res.send(db.fetchAll());
 });
 
 app.get('/reports/:id', (req, res) => {
-  res.send(`GET Get report with id ${req.params.id}`);
+  res.send(db.fetch(req.params.id));
 });
 
 app.post('/reports', (req, res) => {
-  res.send('POST Create Report');
+  res.send(db.save(req.body));
 });
 
 app.put('/reports/:id', (req, res) => {
-  res.send(`PUT Update report with id ${req.params.id}`);
+  res.send(db.update(req.params.id, req.body));
 });
 
 app.delete('/reports/:id', (req, res) => {
-  res.send(`DELETE Delete report with id ${req.params.id}`);
+  res.send(db.remove(req.params.id));
 });
 
 // 404
