@@ -52,6 +52,29 @@ The goals of this exercise are as follows:
 
 All of the bullet points above are **_optional_**. Don't feel obligated to complete anything that's taking up too much time. This exercise is not meant to consume your weekend, but do complete as much as you can.
 
+### API Documentation
+
+#### `GET /reports`
+
+* **Request Body:** N/A
+* **Response Body:** Array
+
+Fetch all Reports.
+
+#### `POST /reports`
+
+* **Request Body:** Report Object
+* **Response Body:** Report Object
+
+Create a new report on the server. The server will populate the Report Object with an id, created date and updated date.
+
+#### `DELETE /reports/:id`
+
+* **Request Body:** N/A
+* **Response Body:** Report Object
+
+Delete a report on the server using its id. Ex: `DELETE /reports/123`. The response will be the newly deleted report.
+
 ## Wrapping Up
 
 Please respond to the initial email thread with links to your solutions to Exercise 1 and Exercise 2
