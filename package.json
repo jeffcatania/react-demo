@@ -12,9 +12,12 @@
   "devDependencies": {
     "eslint": "^2.9.0",
     "eslint-config-airbnb-base": "^2.0.0",
-    "eslint-plugin-import": "^1.6.1"
+    "eslint-plugin-import": "^1.6.1",
+    "nodemon": "^1.9.2"
   },
   "scripts": {
+    "start": "node server/app.js",
+    "mon": "nodemon server/app.js",
     "lint": "eslint server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
