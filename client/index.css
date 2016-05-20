@@ -1,0 +1,32 @@
+body { font-size: 16px; }
+
+
+section {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.header {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.leftPane {
+  width: 10rem;
+  float: left;
+}
+
+.content {
+  margin-left: 10rem;
+}
+
+.report-list-item {
+  padding: 1rem;
+  border-top: 1px;
+  border-bottom: 1px; 
+  border-color: black;
+}
